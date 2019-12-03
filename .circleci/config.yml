@@ -5,8 +5,8 @@ jobs:
   build:
     docker: 
       - image: alpine
-    environment: 
-      awsaccount: advaitkukade@gmail.com
+        environment: 
+          awsaccount: advaitkukade@gmail.com
 workflows:
   deploy_application:
     jobs:
