@@ -5,6 +5,7 @@ workflows:
       - aws-code-deploy/deploy:
           application-name: HTMLTRY2
           deployment-group: HTMLTRY2DG
+          aws_default_region: ${AWS_REGION_DEFAULT}
           service-role-arn: arn:aws:iam::760603953831:role/CodeDeployServiceRole2
           bundle-bucket: htmlmybucket1
           bundle-key: Htmlfiles.zip
