@@ -4,7 +4,6 @@ workflows:
     jobs:
       - aws-code-deploy/deploy:
           application-name: HTMLTRY2
-          aws_default_region: ap-south-1
           deployment-group: HTMLTRY2DG
           service-role-arn: arn:aws:iam::760603953831:role/CodeDeployServiceRole2
           bundle-bucket: htmlmybucket1
