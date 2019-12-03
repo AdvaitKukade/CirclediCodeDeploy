@@ -7,7 +7,7 @@ workflows:
           deployment-group: HTMLTRY2DG
           service-role-arn: arn:aws:iam::760603953831:role/CodeDeployServiceRole2
           bundle-bucket: htmlmybucket1
-          bundle-key: Htmlfiles.zip
+          bundle-key: Htmlfiles
           #arguments: '--profile assume_role'
 orbs:
    aws-code-deploy: circleci/aws-code-deploy@0.0.10
