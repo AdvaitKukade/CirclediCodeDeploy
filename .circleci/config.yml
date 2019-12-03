@@ -1,0 +1,13 @@
+version: 2.1
+orbs:
+  aws-code-deploy: circleci/aws-code-deploy@1.0.0
+workflows:
+  deploy_application:
+    jobs:
+      - aws-code-deploy/deploy:
+          application-name: HTMLTRY2
+          deployment-group: HTMLTRY2DG
+          service-role-arn: arn:aws:iam::760603953831:role/CodeDeployServiceRole2
+          bundle-bucket: htmlmybucket1
+          bundle-key: Htmlfiles.zip
+          
