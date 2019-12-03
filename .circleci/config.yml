@@ -1,6 +1,12 @@
 version: 2.1
 orbs:
   aws-code-deploy: circleci/aws-code-deploy@0.0.10
+jobs:
+  build:
+    docker: 
+      - image: alpine
+    environment: 
+      awsaccount: advaitkukade@gmail.com
 workflows:
   deploy_application:
     jobs:
