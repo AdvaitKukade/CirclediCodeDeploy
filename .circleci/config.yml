@@ -1,19 +1,19 @@
 version: 2.1
-orbs:
-  aws-code-deploy: circleci/aws-code-deploy@0.0.10
 jobs:
   build:
     docker: 
       - image: alpine
-        environment: 
-          awsaccount: advaitkukade@gmail.com
+    environment: 
+      awsaccount: advaitkukade@gmail.com
 workflows:
   deploy_application:
     jobs:
+      - build
       - aws-code-deploy/deploy:
           application-name: HTMLTRY2
           deployment-group: HTMLTRY2DG
           service-role-arn: arn:aws:iam::760603953831:role/CodeDeployServiceRole2
           bundle-bucket: htmlmybucket1
           bundle-key: Htmlfiles.zip
-          
+orbs:
+   aws-code-deploy: circleci/aws-code-deploy@0.0.10
