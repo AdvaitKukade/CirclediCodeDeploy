@@ -3,6 +3,7 @@ workflows:
   deploy_application:
     jobs:
       - aws-code-deploy/deploy:
+          a: 
           application-name: HTMLTRY2
           deployment-group: HTMLTRY2DG
           service-role-arn: arn:aws:iam::760603953831:role/CodeDeployServiceRole2
