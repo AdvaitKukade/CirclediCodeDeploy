@@ -3,12 +3,11 @@ jobs:
   build:
     docker: 
       - image: alpine
-    environment: 
-      awsaccount: advaitkukade@gmail.com
+    #environment: 
+    #  awsaccount: advaitkukade@gmail.com
 workflows:
   deploy_application:
     jobs:
-      - build
       - aws-code-deploy/deploy:
           application-name: HTMLTRY2
           deployment-group: HTMLTRY2DG
