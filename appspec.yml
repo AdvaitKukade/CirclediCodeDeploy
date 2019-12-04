@@ -1,7 +1,7 @@
 version: 0.0 
 os: linux
 files:
-  - source: https://github.com/AdvaitKukade/CirclediCodeDeploy.git
+  - source: ./
   - destination: /var/www/html
 hooks:
   BeforeInstall: 
